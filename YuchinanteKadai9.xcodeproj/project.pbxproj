@@ -13,6 +13,7 @@
 		4F2C14422B8CDDAA0056AE67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2C14402B8CDDAA0056AE67 /* Main.storyboard */; };
 		4F2C14442B8CDDAB0056AE67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F2C14432B8CDDAB0056AE67 /* Assets.xcassets */; };
 		4F2C14472B8CDDAB0056AE67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F2C14452B8CDDAB0056AE67 /* LaunchScreen.storyboard */; };
+		4F2C144F2B8CE63E0056AE67 /* SelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F2C144E2B8CE63E0056AE67 /* SelectViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4F2C14432B8CDDAB0056AE67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F2C14462B8CDDAB0056AE67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F2C14482B8CDDAB0056AE67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F2C144E2B8CE63E0056AE67 /* SelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				4F2C143A2B8CDDAA0056AE67 /* AppDelegate.swift */,
 				4F2C143C2B8CDDAA0056AE67 /* SceneDelegate.swift */,
 				4F2C143E2B8CDDAA0056AE67 /* ViewController.swift */,
+				4F2C144E2B8CE63E0056AE67 /* SelectViewController.swift */,
 				4F2C14402B8CDDAA0056AE67 /* Main.storyboard */,
 				4F2C14432B8CDDAB0056AE67 /* Assets.xcassets */,
 				4F2C14452B8CDDAB0056AE67 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2C144F2B8CE63E0056AE67 /* SelectViewController.swift in Sources */,
 				4F2C143F2B8CDDAA0056AE67 /* ViewController.swift in Sources */,
 				4F2C143B2B8CDDAA0056AE67 /* AppDelegate.swift in Sources */,
 				4F2C143D2B8CDDAA0056AE67 /* SceneDelegate.swift in Sources */,
