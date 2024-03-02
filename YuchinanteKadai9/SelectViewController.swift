@@ -15,48 +15,39 @@ protocol SelectViewControllerDelegate: AnyObject {
 
 // SelectViewController: 都道府県を選択する画面のViewController
 class SelectViewController: UIViewController {
-    //各都道府県のボタン
-    @IBOutlet weak var tokyoButton: UIButton!
-    @IBOutlet weak var kanagawaButton: UIButton!
-    @IBOutlet weak var saitamaButton: UIButton!
-    @IBOutlet weak var chibaButton: UIButton!
+    // 各都道府県のボタン
+    @IBOutlet private weak var tokyoButton: UIButton!
+    @IBOutlet private weak var kanagawaButton: UIButton!
+    @IBOutlet private weak var saitamaButton: UIButton!
+    @IBOutlet private weak var chibaButton: UIButton!
 
-    // 選択された都道府県を保持するプロパティ
-    var selectedPrefecture = ""
     // デリゲートに選択された都道府県を通知
     weak var delegate: SelectViewControllerDelegate?
 
-    @IBAction func didTapTokyoButton(_ sender: Any) {
-        // 東京都が選択された
-        selectedPrefecture = "東京都"
-        // デリゲートに選択された都道府県を通知
-        delegate?.didSelectPrefecture(selectedPrefecture)
+    @IBAction private func didTapTokyoButton(_ sender: Any) {
+        didSelectPrefecture(name: "東京都")
+    }
+
+    @IBAction private func didTapKanagawaButton(_ sender: Any) {
+        didSelectPrefecture(name: "神奈川県")
+    }
+
+    @IBAction private func didTapSaitamaButton(_ sender: Any) {
+        didSelectPrefecture(name: "埼玉県")
+    }
+
+    @IBAction private func didTapChibaButton(_ sender: Any) {
+        didSelectPrefecture(name: "千葉県")
+    }
+
+    // Cancelボタン
+    @IBAction private func didTapCancelButton(_ sender: Any) {
         // モーダルを閉じる
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func didTapKanagawaButton(_ sender: Any) {
-        selectedPrefecture = "神奈川県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func didTapSaitamaButton(_ sender: Any) {
-        selectedPrefecture = "埼玉県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
-    }
-
-    @IBAction func didTapChibaButton(_ sender: Any) {
-        selectedPrefecture = "千葉県"
-        delegate?.didSelectPrefecture(selectedPrefecture)
-        self.dismiss(animated: true, completion: nil)
-    }
-
-
-    //Cancelボタン
-    @IBAction func didTapCancelButton(_ sender: Any) {
-        // モーダルを閉じる
-        self.dismiss(animated: true, completion: nil)
+    private func didSelectPrefecture(name: String) {
+        delegate?.didSelectPrefecture(name)
+        dismiss(animated: true, completion: nil)
     }
 }

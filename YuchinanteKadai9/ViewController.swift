@@ -10,22 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //画面上の都道府県ラベル、未選択ラベル、入力ボタン
-    @IBOutlet weak var prefecturesLabel: UILabel!
-    @IBOutlet weak var selectedLabel: UILabel!
-    @IBOutlet weak var selectButton: UIButton!
+    // 画面上の都道府県ラベル、未選択ラベル、入力ボタン
+    @IBOutlet private weak var prefecturesLabel: UILabel!
+    @IBOutlet private weak var selectedLabel: UILabel!
+    @IBOutlet private weak var selectButton: UIButton!
 
     // 選択された都道府県を保持するプロパティ
-    var selectedPrefecture = ""
+    private var selectedPrefecture = ""
 
     // ユーザーが都道府県を選択するボタンがタップされた時の処理
-    @IBAction func didTapSelectButton(_ sender: Any) {
+    @IBAction private func didTapSelectButton(_ sender: Any) {
         // Main.storyboardからSelectViewControllerをインスタンス化して表示する
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let selectViewController = storyboard.instantiateViewController(withIdentifier: "SelectViewController") as? SelectViewController {
             selectViewController.delegate = self
             selectViewController.modalPresentationStyle = .fullScreen
-            self.present(selectViewController, animated: true, completion: nil)
+            present(selectViewController, animated: true, completion: nil)
         }
     }
 }
