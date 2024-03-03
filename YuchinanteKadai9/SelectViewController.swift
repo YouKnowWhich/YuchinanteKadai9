@@ -28,19 +28,18 @@ class SelectViewController: UIViewController {
         didSelectPrefecture(name: "東京都")  // 選択された都道府県を通知
     }
     
-    @IBAction func didTapKanagawaButton(_ sender: Any) {
+    @IBAction private func didTapKanagawaButton(_ sender: Any) {
         didSelectPrefecture(name: "神奈川県")  // 選択された都道府県を通知
     }
 
-    @IBAction func didTapSaitamaButton(_ sender: Any) {
+    @IBAction private func didTapSaitamaButton(_ sender: Any) {
         didSelectPrefecture(name: "埼玉県")  // 選択された都道府県を通知
 
     }
 
-    @IBAction func didTapChibaButton(_ sender: Any) {
+    @IBAction private func didTapChibaButton(_ sender: Any) {
         didSelectPrefecture(name: "千葉県")  // 選択された都道府県を通知
     }
-
 
     //Cancelボタン
     @IBAction private func didTapCancelButton(_ sender: Any) {
